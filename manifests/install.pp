@@ -296,7 +296,7 @@ define jdk_oracle::install(
         exec { 'get_jce_package':
           cwd     => $install_dir,
           creates => "${install_dir}/jce_from_cache",
-          command => 'touch jce_from_cache',
+          command => "touch jce_from_cache",
         }
       } else {
         exec { 'get_jce_package':
